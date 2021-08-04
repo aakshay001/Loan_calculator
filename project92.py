@@ -18,7 +18,7 @@ def calculate_outstanding_balance(p,n,r,m):
 st.title("EMI Calculator App")
 p = st.number_input("Principal Amount", value=1000, step=1000)
 tenure = st.number_input("Tenure(in months)", value=1, step=1)
-roi = st.number_input("Rate of Interest", value=0.0, step=0.1)
+roi = st.number_input("Rate of Interest", value=7.0, step=0.1)
 m = st.number_input("Outstanding Months", value=1, step=1)
 
 st.write("Principal Amount: ",p)
