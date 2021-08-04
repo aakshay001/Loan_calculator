@@ -16,7 +16,7 @@ def calculate_outstanding_balance(p,n,r,m):
 
 
 st.title("EMI Calculator App")
-p = st.slider("Principal Amount",1000,1000000)
+p = st.number_input("Principal Amount", value=1000, step=1000)
 tenure = st.slider("Tenure",1,30*12)
 roi = st.slider("Rate of Interest",1,15)
 m = st.slider("Outstanding Months",1,30*12)
