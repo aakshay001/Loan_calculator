@@ -26,13 +26,19 @@ st.write("Tenure: ",tenure,"Months")
 st.write("Rate of Interest: ",roi,"%")
 st.write("Outstanding Months: ",m,"Months")
 
+option = st.selectbox("Enter Your Choice",("Calculate EMI","Outstanding Balance"))
+if st.button("Calculate"):
+	if option == "Calculate EMI":
+		emi = calculate_emi(p,tenure/12,roi)
+	        st.write("Calculated EMI is: ",emi)
+		
+	elif option ==  "Calculate Outstanding Balance":
+		balance = calculate_outstanding_balance(p,tenure/12,roi,m)
+	        st.write("Outstanding Balance: ",balance)
+		
+	
 
-if st.button("Calculate EMI"):
-	emi = calculate_emi(p,tenure/12,roi)
-	st.write("Calculated EMI is: ",emi)
 
-elif st.button("Calculate Outstanding Balance"):
-	balance = calculate_outstanding_balance(p,tenure/12,roi,m)
-	st.write("Outstanding Balance: ",balance)
+	
 
 
